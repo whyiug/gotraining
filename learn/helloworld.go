@@ -2,11 +2,30 @@ package main
 
 import "fmt"
 
-func main()  {
-	a := []string{"你好", "2你好", "3你好"}
-	fmt.Printf("%v\t%p\n", &a, &a)
-	fmt.Printf("%v\t%p\n", &a[0], &a[0])
-	fmt.Printf("%v\t%p\n", &a[1], &a[1])
-	fmt.Printf("%v\t%p\n", &a[2], &a[2])
+func g(i int) {
+	if i>1 {
+		fmt.Println("Panic!")
+		panic("123")
+		panic(fmt.Sprintf("%v", i))
+	}
+
 }
 
+func f() {
+	defer func() {
+		if r := recover(); r != nil {
+			fmt.Println("Recovered in f", r)
+		}
+	}()
+
+	for i := 0; i < 4; i++ {
+		fmt.Println("Calling g with ", i)
+		g(i)
+		fmt.Println("Returned normally from g.")
+	}
+}
+
+func main() {
+	f()
+	fmt.Println("Returned normally from f.")
+}

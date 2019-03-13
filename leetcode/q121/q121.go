@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	// 121. Best Time to Buy and Sell Stock
-	var ns = []int{7,1,5,3,6,4}
+	var ns = []int{7, 1, 5, 3, 6, 4}
 	// var nums121 = []int{7, 6, 4, 3, 1}
 	fmt.Println(maxProfit(ns))
 	// 121. Best Time to Buy and Sell Stock
@@ -27,4 +27,3 @@ func maxProfit(prices []int) int {
 	}
 	return maxP
 }
-

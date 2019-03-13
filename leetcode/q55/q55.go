@@ -19,12 +19,12 @@ Input: [3,2,1,0,4]
 Output: false
 Explanation: You will always arrive at index 3 no matter what. Its maximum
              jump length is 0, which makes it impossible to reach the last index.
- */
+*/
 
 import "fmt"
 
 func main() {
-	var nums55 = []int{3,0,8,2,0,0,1}
+	var nums55 = []int{3, 0, 8, 2, 0, 0, 1}
 	fmt.Println(canJump(nums55))
 }
 
@@ -49,4 +49,3 @@ func canJump(nums []int) bool {
 	}
 	return f[len(nums)-2] >= len(nums)-1
 }
-

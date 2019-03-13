@@ -1,11 +1,8 @@
 package main
 
-import (
-	"github.com/stretchr/testify/assert"
-	"testing"
-)
+import "testing"
 
-func Test_canJump(t *testing.T) {
+func Test_threeSum(t *testing.T)  {
 	var testcases = []struct {
 		input  []int
 		expect bool

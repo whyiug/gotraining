@@ -36,7 +36,6 @@ func main() {
 	fmt.Println(maxProfit(nums122))
 }
 
-
 func maxProfit(prices []int) int {
 	var begin, end int
 	// var r = make([]int, len(prices))

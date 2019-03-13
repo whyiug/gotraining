@@ -11,16 +11,17 @@ func un(s string) {
 	fmt.Println("leaving: ", s)
 }
 
-func a()  {
+func a() {
 	defer un(trace("a"))
 	fmt.Println("in a")
 }
 
-func b()  {
+func b() {
 	defer un(trace("b"))
 	fmt.Println("in b")
 	a()
 }
+
 /**
 Print:
 entering: b
@@ -29,7 +30,7 @@ entering: a
 in a
 leaving a
 leaving b
- */
+*/
 
 /**
 Print(Wrong):
@@ -39,7 +40,7 @@ entering: a
 leaving: a
 entering: b
 leaving: b
- */
+*/
 
 func main() {
 	b()
