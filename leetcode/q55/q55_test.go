@@ -1,7 +1,6 @@
 package main
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
 )
 
@@ -17,6 +16,8 @@ func Test_canJump(t *testing.T) {
 	}
 	for _, v := range testcases {
 		output := canJump(v.input)
-		assert.Equal(t, output, v.expect)
+		if output != v.expect {
+			t.Error()
+		}
 	}
 }
