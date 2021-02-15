@@ -8,6 +8,10 @@ import (
 
 
 func main()  {
+	var a, b int32
+	a = 2265
+	b = 2265
+	fmt.Println( fmt.Sprintf("%d*%d",a, b))
 	fmt.Println( eraseOverlapIntervals([][]int {{1,2},{2,3},{3,4},{1,3}}))
 	fmt.Println( eraseOverlapIntervals([][]int {{1,2},{1,2},{1,2}}))
 	fmt.Println( eraseOverlapIntervals([][]int {{1,2},{2,3}}))
